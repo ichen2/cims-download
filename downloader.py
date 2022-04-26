@@ -24,3 +24,8 @@ for data_type in data_types:
   for file in glob.glob(data_type + "*"):
     os.remove(file)
   print("Finished downloading file from " + url)
+# remove all the extra files (.pdf and .txt files)
+for file in glob.glob("./data/*.pdf"):
+  os.remove(file)
+for file in glob.glob("./data/*.txt"):
+  os.remove(file)
